@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>family age</title>
+		<script type="text/javascript">
+			function fun(){
+				var time = new Date();
+				var this_year = time.getFullYear();
+				var me = this_year - 1995;
+				var father_age = me + 25;
+				var mother_age = me + 24;
+				var sister_age = me -2;
+				var showfather = `father:${father_age}`;
+				var showmotber = `mother:${mother_age}`;
+				var showme = `brother:${me}`;
+				var showsister = `sister:${sister_age}`;
+				document.getElementById("father").innerHTML = showfather;
+				document.getElementById("mother").innerHTML = showmotber;
+				document.getElementById("me").innerHTML = showme;
+				document.getElementById("sister").innerHTML = showsister;
+			}
+//			setInterval("fun()",1000);
+		</script>
+		<style type="text/css">
+			div{
+				font-size: 60px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body onload="fun()">
+		<div id="father"></div>
+		<div id="mother"></div>
+		<div id="me"></div>
+		<div id="sister">加载中。。。</div>
+	</body>
+</html>
